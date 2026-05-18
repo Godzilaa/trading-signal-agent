@@ -4,6 +4,23 @@ Autonomous on-chain agent for Solana that discovers market data tools via Synaps
 
 Built for the OOBE Protocol × Ace Data Cloud bounty.
 
+## Problem
+
+Crypto traders are drowning in data — price feeds, news, on-chain metrics, social sentiment. No human can watch 10+ tokens across all these sources 24/7 and make consistent, disciplined trading decisions without emotional bias. Existing bots are opaque: they trade with hardcoded rules, don't explain their reasoning, and can't adapt to new market conditions.
+
+## Solution
+
+An **autonomous AI agent** that runs 24/7 with zero human intervention. Every 2 minutes it:
+
+1. **Registers itself on-chain** via SAP so other protocols and users can discover it
+2. **Fetches live prices** for top Solana tokens from Jupiter
+3. **Searches real-time news & sentiment** for each token using the Ace Data Cloud Search API
+4. **Analyzes every token with GPT-4o-mini** through Ace Data Cloud Chat Completions — combining price data, volume, 24h change, cross-market context, and live news into a structured trading signal
+5. **Ranks and filters signals** by confidence and risk, picks the best opportunity
+6. **Logs every decision** — price context, AI reasoning, confidence score, trade result
+
+Each signal is a transparent, readable JSON explanation: *why* this token, *what* the AI sees, *how* confident it is. No black box, no hardcoded rules, no emotional trading.
+
 ## Architecture
 
 ```
